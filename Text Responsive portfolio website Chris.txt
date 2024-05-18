@@ -1,6 +1,6 @@
 ========== HEADER ==========
 .nav__logo
-Chris
+Salman
 
 .nav__link
 Home - Skills - Qualification - Services - Projects - Contact
