@@ -198,3 +198,82 @@ sr.reveal(`.home__info div`, { delay: 600, origin: 'bottom', interval: 100 })
 sr.reveal(`.skills__content:nth-child(1),.contact__content:nth=child(1)`)
 sr.reveal(`.skills__content:nth-child(2),.contact__content:nth=child(2)`, { origin: 'left' })
 sr.reveal(`.qualification__content,.service__card`, { interval: 100 })
+
+
+
+
+
+
+// Projects 
+// Array of project data
+const projects = [
+    {
+        img: "Assets/img/ruhaloud.png", // Replace with the actual image path
+        subtitle: "Website",
+        title: "RuhalOud",
+        link: "https://ruhaloud.store/", // Replace with the actual project link
+    },
+   
+    {
+        img: "Assets/img/exitbase.png",        // Replace with the actual image path
+        subtitle: "Website",
+        title: "Exitbase",
+        link: "https://exitbase.pk/",// Replace with the actual project link
+    },
+    {
+        img: "Assets/img/saimarahim.png", // Replace with the actual image path
+        subtitle: "Website",
+        title: "SaimaRahim",
+        link: "https://saimarahim.com/", // Replace with the actual project link
+    },
+  
+    {
+        img: "Assets/img/payxoom.png", // Replace with the actual image path
+        subtitle: "Website",
+        title: "Payxoom",
+        link: "https://payxoom.ca/", // Replace with the actual project link
+    },
+    {
+        img: "Assets/img/project2.jpg", // Replace with the actual image path
+        subtitle: "Website (Under Construction)",
+        title: "Auxell",
+        link: "https://auxell.com.pk", // Replace with the actual project link
+    },
+
+    {
+        img: "Assets/img/softxoom.png", // Replace with the actual image path
+        subtitle: "Website (Under Construction)",
+        title: "SoftXoom",
+        link: "https://softxoom.site/", // Replace with the actual project link
+    },
+    {
+        img: "Assets/img/almir.jpg",        // Replace with the actual image path
+        subtitle: "Website",
+        title: "ALMIR ",
+        link: "https://almirrealestate.com/lander",// Replace with the actual project link
+    },
+    
+    
+];
+
+// Reference to the container where projects will be rendered
+const projectsContainer = document.getElementById("projects-container");
+
+// Function to generate project cards dynamically
+projects.forEach((project) => {
+    const projectHTML = `
+        <div class="projects__contents swiper-slide">
+            <img src="${project.img}" alt="${project.title}" class="projects__img" />
+            <div>
+                <span class="projects__subtitle">${project.subtitle}</span>
+            </div>
+            <h1 class="projects__title">${project.title}</h1>
+            <a href="${project.link}" class="projects__button">
+                View demo <i class="ri-arrow-right-line"></i>
+            </a>
+        </div>
+    `;
+    projectsContainer.innerHTML += projectHTML;
+});
+
+
